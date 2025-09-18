@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap");
+body {
+    margin: 0;
+    font-family: "Poppins";
+    width: 100vw;
+    height: 100vh;
+    background: #ecf0f3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* place-items: center; */
+    overflow: hidden;
+}
+.container {
+    position: relative;
+    width: 350px;
+    height: 500px;
+    border-radius: 30px;
+    padding: 40px;
+    background: #ecf0f3;
+    box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+}
+.brand-logo {
+    width: 100px;
+    height: 100px;
+    background: url("https://img.icons8.com/color/100/000000/twitter--v2.png");
+    margin: auto;
+    box-shadow: 7px 7px 10px #cbced1, -7px -7px 10px white;
+    border-radius: 50%;
+}
+.brand-title {
+    margin-top: 10px;
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #1da1f2;
+    letter-spacing: 1px;
+}
