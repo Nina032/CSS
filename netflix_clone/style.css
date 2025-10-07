@@ -214,3 +214,6 @@ body {
     padding: 20px 30px;
     margin: 0;
 }
+.item:target .icon::after {
+    transform: rotateY(90deg);
+}
