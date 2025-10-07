@@ -157,3 +157,27 @@ body {
 .img img {
     width: 100%;
 }
+.list {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.list h1 {
+    color: rgb(116, 45, 116);
+    font-size: 3rem;
+    padding: 3rem 0 4rem 0;
+}
+.title {
+    background: #504b4b;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    font-size: 1.7rem;
+    font-weight: 400;
+    text-decoration: none;
+}
