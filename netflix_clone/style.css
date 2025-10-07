@@ -198,3 +198,19 @@ body {
     transform: rotate(90deg);
     transition: 0.5 linear;
 }
+.text {
+    background: #504b4b;
+    color: #fff;
+    line-height: 35px;
+    margin: 3px 0;
+    font-size: 1.5rem;
+    font-weight: 400;
+    height: 0;
+    opacity: 0;
+}
+.item:target .text {
+    opacity: 1;
+    height: auto;
+    padding: 20px 30px;
+    margin: 0;
+}
