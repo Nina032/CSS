@@ -181,3 +181,20 @@ body {
     font-weight: 400;
     text-decoration: none;
 }
+.icon {
+    width: 20px;
+    position: relative;
+}
+.icon::before, .icon::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 3px;
+    background: #fff;
+    top: -1.5px;
+}
+
+.icon::after {
+    transform: rotate(90deg);
+    transition: 0.5 linear;
+}
