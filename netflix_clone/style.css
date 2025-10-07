@@ -217,3 +217,44 @@ body {
 .item:target .icon::after {
     transform: rotateY(90deg);
 }
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 4rem 0;
+    margin: auto;
+}
+.footer .one {
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem 4rem;
+    margin: auto;
+    width: 25%;
+}
+.footer .two, .footer .three, .footer .four {
+      display: flex;
+    justify-content: space-between;
+    padding: 4rem 0;
+    margin: auto;
+    width: 25%;
+}
+.footer .one li {
+    padding: 7px 0;
+}
+.footer .two li {
+    padding: 7px 0;
+}
+.footer .three li {
+    padding: 7px 0;
+}
+.footer .four li {
+    padding: 7px 0;
+}
+
+.footer .one li a, .two li a, .three li a, .four li a {
+    color: #fff;
+    text-decoration: none;
+}
+.footer .one li a:hover, .two li a:hover, .three li a:hover, .four li a:hover {
+  border-bottom: 1px solid #ccc;
+}
