@@ -311,3 +311,36 @@ body {
     font-size: 1.5rem;
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
 }
+@media screen and (max-width:768px) {
+    .footer {
+        flex-direction: column;
+    }
+    .footer .one {
+        width: 50%;
+        padding-bottom: 0;
+    }
+    .footer .two, .footer .three, .footer .four {
+        width: 50%;
+        padding-bottom: 0;
+    }
+    .banner2 .box .heading p {
+        font-size: 1.1rem;
+        padding: 13px 0;
+        padding-bottom: 17px;
+    }
+    .banner2 .box .search {
+        flex-direction: column;
+    }
+    .banner2 .box .search input {
+        min-width: 310px;
+        margin-bottom: 20px;
+    }
+    .banner .box .search a {
+        min-width: 310px;
+        padding: 0 30px;
+    }
+
+}
+@media screen and (max-width: 496px) {
+    
+}
