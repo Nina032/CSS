@@ -25,6 +25,14 @@ div.middle-section {
     margin-left: 75px;
     margin-right: 35px;
 }
+div.right-section{
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
 img.hamburger-menu {
     height: 26px;
     margin-left: 24px;
@@ -45,7 +53,39 @@ img.hamburger-menu:hover, img.youtube-logo:hover{
     margin-left: -1px;
     margin-right: 10px;
 }
-img.search-icon{
+img.search-icon, 
+img.create-video-icon, 
+img.youtube-apps-icon,
+img.notifications-icon {
     height: 30px;
     margin-bottom: 10px;
+}
+div.notifications-icon-container {
+    position: relative;
+}
+div.notifications-count{
+    position: absolute;
+    top: -2px;
+    right: -5px;
+}
+img.profile-icon {
+    height: 30px;
+    border-radius: 50%;
+}
+.tooltip {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    position: absolute;
+    bottom: -35px;
+    background-color: gray;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    opacity: 0;
+}
+.search-icon-container:hover div.tooltip,
+.upload-icon:hover div.tooltip,
+.youtube-apps:hover div.tooltip,
+.notifications-icon-container:hover div.tooltip {
+    opacity: 1;
 }
