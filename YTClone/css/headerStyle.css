@@ -1,0 +1,27 @@
+.header {
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: white;
+    border-bottom-width: 1px;
+    border-style: solid;
+    border-bottom-color: rgb(228, 228, 228);
+}
+div.left-section {
+    display: flex;
+    align-items: center;
+}
+img.hamburger-menu {
+    height: 26px;
+    margin-left: 24px;
+    margin-right: 24px;
+}
+img.youtube-logo {
+    height: 70px;
+}
