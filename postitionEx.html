@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <title>Exempel på CSS-position</title>
+  <style>
+    body {
+      height: 2000px; /* för att visa scroll-effekten */
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    .box {
+      width: 150px;
+      height: 100px;
+      color: white;
+      padding: 10px;
+      font-weight: bold;
+    }
+
+    .static {
+      background-color: gray;
+      position: static;
+    }
+
+    .relative {
+      background-color: blue;
+      position: relative;
+      top: 20px;
+      left: 20px;
+    }
+
+    .absolute-container {
+      position: relative;
+      height: 200px;
+      background-color: #eee;
+      margin-top: 20px;
+    }
+
+    .absolute {
+      background-color: green;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+
+    .fixed {
+      background-color: red;
+      position: fixed;
+      top: 0;
+      right: 0;
+    }
+
+    .sticky {
+      background-color: orange;
+      position: sticky;
+      top: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box static">Static</div>
+  <div class="box relative">Relative</div>
+
+  <div class="absolute-container">
+    <div class="box absolute">Absolute</div>
+  </div>
+
+  <div class="box fixed">Fixed</div>
+
+  <div class="box sticky">Sticky</div>
+
+  <p style="margin-top: 1000px;">Scrolla ner för att se effekterna av "fixed" och "sticky".</p>
+
+</body>
+</html>
