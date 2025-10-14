@@ -1,67 +1,70 @@
-.sidebar{
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    top: 55px;
-    background-color: white;
-    padding-top: 8px;
-    overflow-y: auto;
-    z-index: 200;
-}
-.sidebar-link:hover {
-    cursor: pointer;
-}
-.sidebar-link {
-    display: flex;
-    align-items: center;
-    margin-left: 15px;
-}
-.sidebar-link div {
-    margin-right: 10px;
-    white-space: nowrap;
-}
-.sidebar-link img {
-    height: 25px;
-    margin-bottom: 10px;
-    margin-right: 10px;
-}
-/* Large devices ( laptops/desktops, 992px and up) */
-@media screen and (min-width:992px) {
-    .sidebar {
-        width: 120px;
+@media (max-width:1200px) {
+    .sidebar{
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        top: 55px;
+        background-color: white;
+        padding-top: 8px;
+        overflow-y: auto;
+        z-index: 200;
+        width: 90px;
+    }
+    .sidebar-link:hover {
+       background-color: rgb(235, 235, 235)
     }
     .sidebar-link {
-        height: 65px;
-        justify-content: center;
+        height: 75px;
+        display: flex;
         flex-direction: column;
-    }
-    .sidebar-link img {
-        height: 24px;
-        margin-bottom: 5px;
+        justify-content: center;
+        align-items: center;
+        margin-left: 15px;
+        cursor: pointer;
     }
     .sidebar-link div {
-        font-size: 10px;
+      font-family: Roboto, Arial;
+      font-size: 10px;
+    }
+    .sidebar-link img {
+        height: 25px;
+        margin-bottom: 4px;
     }
 }
+
 /* Extra Large devices ( large laptops/desktops, 1200px and up) */
-@media screen and (min-width:1200px) {
+@media screen and (min-width:1200.1px) {
     body {
-        padding-left: 190px;
+        padding-left: 300px;
     }
     .sidebar {
-        width: 200px;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        top: 55px;
+        background-color: white;
+        padding-top: 13px;
+        z-index: 200;
+        width: 220px;
     }
     .sidebar-link {
+        display: flex;
         flex-direction: row;
-        height: 50px;
+        align-items: center;
+        cursor: pointer;
+        padding: 8px 24px;
     }
     .sidebar-link img {
         width: 24px;
         margin-left: 20px;
     }
     .sidebar-link div {
+        font-family: Roboto,;
         font-size: 15px;
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .sidebar-link:hover {
+       background-color: rgb(235, 235, 235)
     }
 }
