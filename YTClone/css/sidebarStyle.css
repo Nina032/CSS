@@ -9,6 +9,12 @@
         overflow-y: auto;
         z-index: 200;
         width: 90px;
+        transition: transform 0.3s ease; /* Mjuk animation när sidomenyn visas/döljs */
+        transform: translateX(-100%); /* Dölj sidomenyn som standard (flytta utanför skärmen) */
+    }
+    /* När checkboxen INTE är ikryssad - visa sidomenyn (flytta tillbaka till position 0) */
+    #sidebar-toggle:not(:checked) ~ .sidebar {
+        transform: translateX(0);
     }
     .sidebar-link:hover {
        background-color: rgb(235, 235, 235)
@@ -44,6 +50,12 @@
         padding-top: 13px;
         z-index: 200;
         width: 220px;
+        transition: transform 0.3s ease; /* Mjuk animation när sidomenyn visas/döljs */
+        transform: translateX(-100%); /* Dölj sidomenyn som standard (flytta utanför skärmen) */
+    }
+    /* När checkboxen INTE är ikryssad - visa sidomenyn (flytta tillbaka till position 0) */
+    #sidebar-toggle:not(:checked) ~ .sidebar {
+        transform: translateX(0);
     }
     .sidebar-link {
         display: flex;

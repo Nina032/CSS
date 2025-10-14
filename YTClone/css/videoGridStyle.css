@@ -3,6 +3,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 16px;
     row-gap: 20px;
+    transition: margin-left 0.3s ease;
 }
 @media (max-width:750px){
     .video-grid {

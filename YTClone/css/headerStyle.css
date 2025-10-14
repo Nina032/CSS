@@ -38,6 +38,14 @@ img.hamburger-menu {
     margin-left: 24px;
     margin-right: 24px;
 }
+.sidebar-toggle {
+    display: none;
+}
+.hamburger-menu-label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
 img.youtube-logo {
     height: 70px;
 }

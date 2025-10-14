@@ -1,10 +1,19 @@
 body {
     margin: 0;
     padding-top: 80px;
-    padding-left: 200px;
+    padding-left: 24px;
     padding-right: 24px;
     background-color: rgb(248, 248, 248);
     font-family: Roboto, Arial, Helvetica, sans-serif;
+    transition: padding-left 0.3s ease, margin-left 0.3s ease;
+}
+/* När checkboxen är ikryssad (checked) - dölj sidomenyn genom att flytta den utanför skärmen */
+#sidebar-toggle:checked ~ .sidebar {
+    transform: translateX(-100%);
+}
+/* När checkboxen INTE är ikryssad (unchecked) - sidomenyn är synlig, flytta video-grid åt höger */
+#sidebar-toggle:not(:checked) ~ .video-grid {
+    margin-left: 90px; /* 90px är bredden på sidomenyn för små skärmar */
 }
 p, div, a {
     margin-bottom: 0;
@@ -13,9 +22,9 @@ p, div, a {
     color: black;
 }
 @media (min-width: 1200.1px) {
-    /* Använd antingen margin-left eller padding-left. Effekterna av båda är samma. */
-    body {
-        margin-left: 168px;
-        /* padding-left: 280px; */
-    } 
+    /* För stora skärmar (1200px och uppåt) */
+    /* När checkboxen INTE är ikryssad - sidomenyn är synlig, flytta video-grid åt höger */
+    #sidebar-toggle:not(:checked) ~ .video-grid {
+        margin-left: 220px; /* 220px är bredden på sidomenyn för stora skärmar */
+    }
 }
