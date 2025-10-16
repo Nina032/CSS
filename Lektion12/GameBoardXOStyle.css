@@ -123,3 +123,43 @@ body {
     color: #ffcc00;
     font-size: 1.2rem;
 }
+.controls {
+    grid-area: controls;
+    background: linear-gradient(145deg, #2c3e50, #1a2434);
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.5);
+}
+.controls h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 1.8rem;
+    color: #ffcc00;
+    margin-bottom: 20px;
+}
+.control-btn {
+    background: linear-gradient(to bottom, #ffcc00, #ff6b00);
+    min-width: 150px;
+    font-size: 1.1rem;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+.control-btn:hover {
+    transform:  translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255, 204, 0, 0.4);
+}
+.control-btn:active {
+    transform: translateY(0);
+}
