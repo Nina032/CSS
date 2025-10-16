@@ -91,4 +91,35 @@ body {
 
 .stats {
     grid-area: stats;
+    background: linear-gradient(145deg, #2c3e50, #1a2434);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.5);
+}
+.stats h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #ffcc00;
+}
+.stat-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.stat-item:last-child {
+    margin-bottom: 0;
+}
+.stat-label {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.stat-value {
+    color: #ffcc00;
+    font-size: 1.2rem;
 }
