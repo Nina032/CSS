@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid layout</title>
+    <style>
+        *, *:before, *:before {
+            box-sizing: border-box;
+        }
+        body{
+            margin: 40px;
+            font-family: sans-serif;
+            background-color: #fff;
+            color: #444;
+        }
+        h1, p {
+            margin: 0 0 1em 0;
+        }
+        .wrapper {
+            max-width: 940px;
+            margin: 0 20px;
+            display: grid;
+            gap: 10px;
+        }
+        .wrapper > * {
+            background-color: #444;
+            color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            font-size: 150%;
+            margin-bottom: 10px;
+        }
+        @media screen and (min-width:500px) {
+            /*if no grid suppport?*/
+            .sidebar {
+                float: left;
+                width: 20%;
+            }
+            .content {
+                float: right;
+                width: 80%;
+            }
+            .wrapper {
+                grid-template-columns: 1fr 3fr;
+                margin: 0 auto;
+            }
+            .header, .footer {
+                grid-column: 1 / -1;
+                clear: both;
+            }
+        }
+        /*We needed to set the width on floated elements back to auto, 
+        and remove the margin as when we have grid we have gaps*/
+        @supports (display: grid) {
+            .wrapper > * {
+                width: auto;
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">My header</header>
+        <aside class="sidebar">Sidebar</aside>
+        <article class="content">
+            <h1>2 column, header and footer</h1>
+            <p>This example uses line-based positioning, 
+                to position header and footer, 
+                stretching them across the grid.</p>
+        </article>
+        <footer class="footer">My footer</footer>
+    </div>
+</body>
+</html>
