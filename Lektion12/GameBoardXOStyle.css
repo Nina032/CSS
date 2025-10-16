@@ -64,6 +64,31 @@ body {
     margin-bottom: 20px;
     color: #ffcc00;
 }
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    width: 300px;
+    height: 300px;
+    margin: 20px auto;
+}
+.cell {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.7rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+.cell:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
 .stats {
     grid-area: stats;
 }
