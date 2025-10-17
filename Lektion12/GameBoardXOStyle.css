@@ -163,3 +163,22 @@ body {
 .control-btn:active {
     transform: translateY(0);
 }
+@media (max-width:768px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "header"
+            "controls"
+            "game-board"
+            "stats"
+        ;
+    }
+    .board {
+        width: 250px;
+        height: 250px;
+    }
+    .control-btn {
+        min-width: 120px;
+        padding: 10px 15px;
+    }
+}
