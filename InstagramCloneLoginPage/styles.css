@@ -1,0 +1,302 @@
+/* ========================================
+   CSS CUSTOM PROPERTIES (VARIABLES)
+   ======================================== */
+:root {
+    --color-primary: #0095f6;
+    --color-secondary: #385185;
+    --color-text-primary: #262626;
+    --color-text-secondary: #808080;
+    --color-border: #dbdbdb;
+    --color-background: #fafafa;
+    --color-white: #ffffff;
+    
+    --spacing-xs: 5px;
+    --spacing-sm: 10px;
+    --spacing-md: 15px;
+    --spacing-lg: 20px;
+    --spacing-xl: 30px;
+    
+    --border-radius-sm: 3px;
+    --border-radius-md: 5px;
+    
+    --max-width-container: 935px;
+    --max-width-auth: 350px;
+    --max-width-mobile: 454px;
+    
+    --font-family-base: Arial, Helvetica, sans-serif;
+}
+
+/* ========================================
+   RESET & BASE STYLES
+   ======================================== */
+* {
+    border: none;
+    box-sizing: border-box;
+    font-family: var(--font-family-base);
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--color-background);
+    height: 100vh;
+    color: var(--color-text-primary);
+}
+
+main {
+    height: 100vh;
+    margin: auto;
+    max-width: var(--max-width-container);
+}
+
+/* Base element styles */
+a { 
+    text-decoration: none; 
+    color: inherit;
+}
+
+h1 { 
+    margin: var(--spacing-lg) 0; 
+}
+
+ul { 
+    list-style: none; 
+}
+
+/* ========================================
+   UTILITY CLASSES - FLEXBOX
+   ======================================== */
+.flex {
+    display: flex;
+}
+
+.direction-column {
+    flex-direction: column;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+/* ========================================
+   LAYOUT COMPONENTS
+   ======================================== */
+.panel {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    margin-bottom: var(--spacing-sm);
+    padding: var(--spacing-sm);
+}
+
+#auth { 
+    max-width: var(--max-width-auth); 
+}
+
+#mobile { 
+    max-width: var(--max-width-mobile); 
+}
+
+#mobile img {
+    height: 618px;
+}
+
+/* ========================================
+   AUTHENTICATION FORMS
+   ======================================== */
+.login-with-fb,
+form { 
+    width: 100%; 
+}
+
+.register,
+form { 
+    padding: var(--spacing-xl) var(--spacing-lg); 
+}
+
+.login-with-fb { 
+    padding: var(--spacing-xl) var(--spacing-lg) var(--spacing-lg) var(--spacing-lg); 
+}
+
+/* Form Elements */
+form .sr-only { 
+    display: none; 
+}
+
+form input {
+    background-color: var(--color-background);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-sm);
+    color: var(--color-text-secondary);
+    margin-bottom: 8px;
+    padding: var(--spacing-sm);
+    width: 100%;
+    font-size: 14px;
+}
+
+form input::placeholder {
+    color: var(--color-text-secondary);
+}
+
+form input:focus {
+    border-color: var(--color-text-secondary);
+    outline: none;
+}
+
+form button {
+    background-color: var(--color-primary);
+    border-radius: var(--border-radius-md);
+    color: var(--color-white);
+    font-weight: bold;
+    height: 35px;
+    margin-top: var(--spacing-sm);
+    width: 100%;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+}
+
+form button:hover {
+    background-color: #1877f2;
+}
+
+/* ========================================
+   SEPARATOR COMPONENT
+   ======================================== */
+.separator {
+    padding: 0 var(--spacing-lg);
+}
+
+.separator span {
+    background-color: var(--color-border);
+    height: 1px;
+    width: calc(100% - var(--spacing-sm));
+}
+
+.separator span:first-child { 
+    margin-right: var(--spacing-sm);
+}
+
+.separator span:last-child { 
+    margin-left: var(--spacing-sm);
+}
+
+.separator .or {
+    color: var(--color-text-secondary);
+    font-weight: bold;
+    font-size: 13px;
+}
+
+/* ========================================
+   FACEBOOK LOGIN SECTION
+   ======================================== */
+.login-with-fb a { 
+    color: var(--color-secondary); 
+}
+
+.login-with-fb > a { 
+    font-size: 12px; 
+}
+
+.login-with-fb div {
+    margin-bottom: var(--spacing-md);
+}
+
+.login-with-fb div a { 
+    font-weight: bold; 
+}
+
+/* ========================================
+   REGISTRATION SECTION
+   ======================================== */
+.register * { 
+    font-size: 14px; 
+}
+
+.register a { 
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+.register p { 
+    margin-right: var(--spacing-xs); 
+}
+
+/* ========================================
+   APP DOWNLOAD SECTION
+   ======================================== */
+.app-download { 
+    padding: var(--spacing-md); 
+}
+
+.app-download p { 
+    padding: var(--spacing-sm) 0; 
+}
+
+.app-download img { 
+    height: 40px; 
+    margin: 0 var(--spacing-xs);
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+footer {
+    margin: 0 auto var(--spacing-xl) auto;
+    max-width: var(--max-width-container);
+}
+
+footer ul { 
+    margin-bottom: var(--spacing-lg); 
+}
+
+footer ul li { 
+    margin: 0 var(--spacing-sm) var(--spacing-sm); 
+} 
+
+footer ul li a { 
+    color: var(--color-secondary); 
+}
+
+footer .copyright { 
+    color: var(--color-text-secondary); 
+}
+
+footer ul li a,
+footer .copyright { 
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN - MEDIA QUERIES
+   ======================================== */
+@media screen and (max-width: 767px) {
+    main { 
+        margin: var(--spacing-xl) auto 50px auto; 
+    }
+    
+    footer .copyright,
+    footer ul li a { 
+        font-size: 11px; 
+    }
+    
+    .panel {
+        border: none;
+        background-color: transparent;
+    }
+    
+    form,
+    .register {
+        padding: var(--spacing-lg) var(--spacing-sm);
+    }
+}
